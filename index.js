@@ -11,6 +11,10 @@ const PORT = process.env.PORT || 5000 ;
 
 app.use(express.json());
 
+app.get("/",(req,res)=>{
+    res.json({ Task : "Mentor and Student Assigning with Database" })
+})
+
 app.use("/students",router);
 app.use("/teachers",teachers_router)
 
